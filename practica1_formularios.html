@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>	
+    <style>
+        div{
+        width: 85%;
+		margin: auto;
+		color: black;
+        }
+    </style>	
+<body style="background-color: rgb(190, 190, 190);">
+    <h1 style="text-align: center;">Paletería "El paletón"</h1>
+    <h2 style="text-align: center;">Compras en línea</h2>
+    <div>
+    <form action="" method="post" enctype="text/plain"> 
+        <fieldset>
+
+            <legend style="text-align: left;">Información general del cliente</legend>
+            <div>
+            <label for="nombre"><b>Nombre:</b></label> <!--Nombre-->
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" size="20">
+
+            <label for="apellidop"><b>Apellido paterno:</b></label>
+            <input type="text" name="apellidop" id="apellidop" placeholder="Apellido paterno">
+    
+            <label for="apellidom"><b>Apellido materno:</b></label>
+            <input type="text" name="apellidom" id="apellidom" placeholder="Apellido materno">
+            </div> <br>
+            <div>
+            <label for="nameuser"><b>Nombre de usuario:</b></label>
+            <input type="text" name="nameuser" id="nameuser" placeholder="Nombre de usuario">
+
+            <label for="pass"><b>Contraseña:</b></label>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña">
+
+            <label for="fecharegistro"><b>Fecha de registro:</b></label>
+            <input type="date" name="fecharegistro" id="fecharegistro">
+        </div> 
+        
+        </fieldset>
+        <fieldset>
+            <legend style="text-align: left;">Datos para facturar</legend>
+            <div>
+            <label for="País"><b>País:</b></label> 
+            <select name="País" id="País" size="4">
+                <optgroup>
+                    <option value="1">México</option>
+                    <option value="2">Canadá</option>
+                    <option value="3">Reino Unido</option>
+                    <option value="4">USA</option>
+                </optgroup>
+            </select>
+            <label for="ciudades"><b>Ciudad</b></label>
+            <input type="text" name="ciudades" list="ciudades">
+            <datalist id="ciudades">
+                <option>San Luis Potsí</option>
+                <option>Guanajuato</option>
+                <option>Querétaro</option>
+                <option>Quintana Roo</option>
+                <option>Guadalajara</option>
+                <option>Saltillo</option>
+            </datalist> 
+           </select>
+           <label for="Calle"><b>Calle:</b></label>
+           <input type="text" name="Calle" id="Calle" placeholder="Calle">
+           </div> <br>
+           <div>
+           <label for="numcasa"><b>Número de casa:</b></label>
+           <input type="number" name="numcasa" id="numcasa" placeholder="Numero exterior">
+           <label for="Colonia"><b>Colonia:</b></label>
+           <input type="text" name="Colonia" id="Colonia" placeholder="Colonia">
+           <label for="correo"><b>E-mail:</b></label>
+           <input type="email" name="correo" id="correo" placeholder="Correo eléctronico"> 
+           </div> <br>
+           <div>
+            <label for="rfc"><b>RFC:</b></label>
+            <input type="number" name="rfc" id="rfc" placeholder="RFC" size="4">
+            <label for="cp"><b>Código postal:</b></label>
+            <input type="number" name="cp" id="cp" placeholder="Código postal" size="4">
+            <input type="checkbox" name="tyc" id="tyc">
+            <label for="tyc"><b>Acepto términos y condiciones</b></label> <br>
+           </div><br>
+           <div>
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="submit" name="Restablecer" id="Restablecer" value="Restablecer">
+           </div>
+        </fieldset>
+
+    </form>
+</div>
+<footer style="text-align: right;">
+    <time><b>Febrero 2025, SLP.</b></time>
+</footer>
+</body>
+</html>
