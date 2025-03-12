@@ -1,0 +1,34 @@
+/*Hoja de estilos externa*/
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 90%;
+    margin: auto;
+    border: 1px solid brown;
+    border-collapse: collapse;
+    caption-side: bottom; /*Puede ser topp o bottom*/
+}
+th,td{
+    border: 1px solid brown;
+}
+table tr:nth-child(odd){
+    background-color: lightcoral;
+}
+table tr:nth-child(even){
+    background-color: lightpink;
+}
+th{
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+}
+td{
+    padding: 12px;
+    text-align: justify;
+}
+table tr:hover{
+    background-color: darkgray;
+    color: white;
+}
