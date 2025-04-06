@@ -1,0 +1,78 @@
+body {
+    font-size: 16px; /* base para em */
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #1e90ff;
+    color: white;
+    height: 10vh; /* altura relativa a la ventana */
+    width: 100vw;  /* ancho completo de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em; /* relativa al body */
+  }
+
+  .contenedor {
+    width: 90%; /* relativa al body */
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+  }
+
+  .absolutas {
+    margin-bottom: 2em;
+  }
+
+  .absolutas div {
+    margin: 10px 0;
+    background-color: #ffe4b5;
+    padding: 10px;
+  }
+
+  .pixeles {
+    width: 200px;
+    height: 100px;
+  }
+
+  .puntos {
+    font-size: 18pt;
+  }
+
+  .centimetros {
+    width: 5cm;
+    height: 2cm;
+  }
+
+  .milimetros {
+    width: 50mm;
+    height: 20mm;
+  }
+
+  .relativas div {
+    margin: 10px 0;
+    background-color: #c3f3c3;
+    padding: 10px;
+  }
+
+  .porcentaje {
+    width: 80%;
+    height: 10%;
+  }
+
+  .em {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  .vmin {
+    font-size: 5vmin;
+  }
+
+  .vmax {
+    width: 20vmax;
+    height: 10vmax;
+  }
