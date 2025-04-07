@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aguas frescas del día</title>
+  <style>
+    body {
+      background-color: #09062e;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #030338;
+      color: aliceblue;
+      font-size: xx-large;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .titulo1 {
+      font-family: "Lato";
+      color: #ffebd0;
+    }
+
+    .regresar {
+      background-color: orange;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      position: absolute;
+      left: 10px;
+      top: 20px;
+    }
+
+    .regresar a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .imagenes {
+      display: flex;
+      gap: 1rem;
+      margin: 30px;
+    }
+
+    .imagen_contenedor {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: flex 0.8s cubic-bezier(.25, .4, .45, 1.4);
+      overflow: hidden;
+    }
+
+    .imagen {
+      width: 100%;
+      height: 20rem;
+      border-radius: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      transition: transform 0.8s cubic-bezier(.25, .4, .45, 1.4);
+    }
+
+    .imagen_contenedor:hover {
+      flex: 2.5; 
+    }
+    .descripcion {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 14px;
+      color: #ffebd0;
+      font-family: sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .imagenes {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="titulo1">
+    Aguas frescas del día (L-V)
+    <button class="regresar"><a href="pagina_menu.html">Regresar</a></button>
+  </header>
+
+  <div class="imagenes">
+    <div class="imagen_contenedor">
+      <div class="imagen" style="background-image: url(agua_frutas.jpeg);"></div>
+      <div class="descripcion">Agua de frutas-Disponible lunes</div>
+    </div>
+
+    <div class="imagen_contenedor">
+      <div class="imagen" style="background-image: url(pepino_limon.jpg);"></div>
+      <div class="descripcion">Pepino con limón-Disponible martes</div>
+    </div>
+
+    <div class="imagen_contenedor">
+      <div class="imagen" style="background-image: url(piña.jpg);"></div>
+      <div class="descripcion">Agua de piña-Disponible miércoles</div>
+    </div>
+
+    <div class="imagen_contenedor">
+      <div class="imagen" style="background-image: url(jamaica.webp);"></div>
+      <div class="descripcion">Agua de jamaica-Disponible jueves</div>
+    </div>
+
+    <div class="imagen_contenedor">
+      <div class="imagen" style="background-image: url(horchata.webp);"></div>
+      <div class="descripcion">Horchata-Disponible viernes</div>
+    </div>
+  </div>
+</body>
+</html>
