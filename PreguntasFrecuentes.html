@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+         @font-face {
+            font-family: "Lato";
+            src: url(Lato/Lato-Regular.ttf);
+        }
+        body{
+      
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #001f4d;
+            color: white;
+        }
+        .titulo{
+            text-align: center;
+            border-radius: 20px ;
+            background-color: #173b61;
+            border: solid 1px #ffebd0;
+            font-family: Lato;
+            font-weight: bold;
+            font-size: 35px;
+            color: #ffebd0;
+            margin-bottom: 5pc;
+            
+        }
+        .preguntas{
+            position: relative;
+            background: linear-gradient(to right, #000428, #004e92); 
+            padding: 40px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 30px;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 20px;
+            flex-wrap: nowrap;
+           /* flex-direction: column;*/
+        }
+        .preguntas img{
+            border-radius: 1005px;
+            height: 600px;
+            width: 600px;
+           
+        }
+        .caja {
+      background: linear-gradient(to right, #000025, #6e00ff);
+      padding: 20px;
+      border-radius: 15px;
+      width: 40%;
+      margin: 20px;
+      min-width: 300px;
+      box-shadow: rgb(50, 0, 0) -5px 10px 10px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::marker {
+      content: " ▶";
+    }
+    details[open] summary::marker {
+      content: "▼ ";
+    }
+    p{
+    background: linear-gradient(to left, white, #ff9355);
+      color: black;
+      border-radius: 10px;
+      border-color: red;
+      text-align: center;
+      box-shadow: rgb(50, 0, 0) -5px 10px 10px;
+      font-size: 15px;
+      font-family: 'Montserrat', sans-serif;
+    
+
+    }
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.redes{
+    position: absolute;
+    bottom: 10px;  
+    right: 10px;   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to left, white, #ff9355);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: rgb(50, 0, 0) -5px 10px 10px;
+}
+.redes img{
+    border-radius: 200px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.redes img:hover{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+.medios_contacto{
+    position: absolute;
+    bottom: 400px;  
+    right: 130px;   
+    font-family: 'Montserrat', sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <button class="regresar"><a href="PaginaPrincipal.html">INICIO</a></button>
+        <h1>Preguntas frecuentes y contacto</h1>
+
+    </div>
+    <div class="preguntas">
+        <ul>
+            <div class="caja">
+                <details>
+                    <summary>¿Dónde se encuentra ubicada la cafetería?</summary>
+                    <p><b>Encuéntranos dentro de la Universidad Politécnica de
+                        San Luis Potosí a un costado del centro de información
+                        y documentación (CID).</b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Cuál es el horario de atención?</summary>
+                    <p><b>Nuestro horario es de: <br>
+                        -Lunes a viernes de 7:00 am a 8:00 pm<br>
+                        -Sábado de 7:00 am a 3:00 pm<br>
+                        -Domingo cerrado
+                    </b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Qué métodos de pago aceptan?</summary>
+                    <p><b>Aceptamos pago en efectivo, tarjetas de credito/débito y transferencias.</b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Puedo reservar una mesa o espacio para estudiar o reunirme?</summary>
+                    <p><b>No, no contamos con reservaciones. Sin embargo, las instalaciones de la cafetería son libres para realizar reuniones o estudiar.</b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Tienen wifi disponible?</summary>
+                    <p><b>Si, contamos con Wi-Fi disponible para nuestros estudiantes y personal.</b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Cambian el menú diariamente o es fijo?</summary>
+                    <p><b>Si, contamos con un menú del día. En el cual se ofrecen variedad de platillos cada día de la semana.</b>
+                    </p>
+                </details>
+            </div>
+
+            <div class="caja">
+                <details>
+                    <summary>¿Tienen redes sociales donde pueda seguir sus novedades o promociones?</summary>
+                    <p><b>Si, encuéntranos en facebook, instagram y tik-tok como: @cafe_UPslp</b>
+                    </p>
+                </details>
+            </div>
+        </ul>
+ 
+        <img src="imagen_duda.jpeg">
+
+        <div class="medios_contacto">
+            <b>Medios de contácto:</b>
+            <ul>
+                <li><b>Teléfono:</b> 444-231-6756</li>
+                <li><b>Correo:</b> cafe.upslp@gmail.com</li>
+            </ul>
+        </div>
+        
+
+
+        <div class="redes">
+            <h3 style="color: black; font-size: 10px; text-align: center;">
+                <b>¡Siguenos en nuestras redes sociales!</b>
+            </h3>
+            <img src="facebook.png">
+            <img src="instagram.jfif">
+            <img src="youtube.png">
+        </div>
+    </div>
+    
+</body>
+</html>
