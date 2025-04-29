@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Javascript</title>
+    <script>
+        function sumar()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var r=parseInt(n1) + parseInt(n2);
+            document.getElementById("resultado").innerHTML=r;
+        }
+        function restar()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var r=parseInt(n1) - parseInt(n2);
+            document.getElementById("resultado").innerHTML=r;
+        }
+        function producto()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var r=parseInt(n1) * parseInt(n2);
+            document.getElementById("resultado").innerHTML=r;
+        }
+        function division()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var r=parseInt(n1) / parseInt(n2);
+            document.getElementById("resultado").innerHTML=r;
+        }
+
+
+    </script>
+    <style>
+        form
+        {
+            background-color: lightblue;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+            width: 35%;
+            height: 55%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        input[type=button]
+        {
+            padding: 1px;
+            border-radius: 8px;
+            background-color: lightcoral;
+            font-size: 13px;
+
+        }
+        input[type=button]:hover
+        {
+            padding: 5px;
+            background-color: blue;
+            color: white;
+        }
+        input[type=text]:focus
+        {
+            background-color: lightgrey;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="num1">Número:</label>
+        <input type="text" name="num1" id="num1" placeholder="Ingresa el primer número"><br>
+        <label for="num2">Número:</label>
+        <input type="text" name="num2" id="num2" placeholder="Ingresa el segundo número"><br>
+        <input type="button" name="suma" id="suma" value="Suma" onclick="sumar()">
+        <input type="button" name="resta" id="resta" value="Resta" onclick="restar()">
+        <input type="button" name="produ" id="produ" value="Multiplicar" onclick="producto()">
+        <input type="button" name="divi" id="divi" value="División" onclick="division()"><br>
+        El resultado es:
+        <p id="resultado" name="resultado"></p>
+    </form>
+    
+</body>
+</html>
