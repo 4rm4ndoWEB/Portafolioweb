@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener datos de formulario</title>
+    <script type="text/JavaScript" src="leerform.js"></script>
+    <style>
+        .cuestionario{
+            background-color: lightcoral;
+            padding: 5%;
+            margin: auto;
+            height: 350px;
+            text-align: center;
+            border-radius: 8px;
+            width: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body style="background-color: lightseagreen; font-family: Arial, Helvetica, sans-serif;">
+    <h1 style="text-align: center;">Registro de usuario</h1>
+    <div class="cuestionario">
+    <form name="formulario">
+        <label for="user">Nombre:</label>
+        <input type="text" name="user" id="user" placeholder="Escribe tu nombre"><br>
+
+        <label for="contra">Contraseña: </label>
+        <input type="password" name="contra" id="contra" placeholder="Ingresa tu contraseña"><br>
+
+        <label for="carrera">Carrera:</label>
+        <select name="carrera" id="carrera">
+            <option value="ITI">Ing. En Tecnologías de la Información</option>
+            <option value="ITEM">Ing. En Telemática</option>
+        </select> <br>
+
+        <label for="genero">Femenino</label>
+        <input type="radio" name="genero"  id="genero" value="f"><br>
+        <label for="genero">Masculino</label>
+        <input type="radio" name="genero" id="genero" value="m"><br>
+        <input type="checkbox" name="check" id="check" >Acepto los términos y condiciones del servicio<br>
+        <input type="button" name="envio" id="envio" value="Enviar" onclick="leerdatos()">
+        
+
+    </form>
+
+    <h2>Tus resultados son:</h2>
+    <div id="resultado"></div>
+
+</div>
+
+</body>
+</html>
