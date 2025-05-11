@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de compra</title>
+    <script type="text/javascript" src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
+    <link rel="stylesheet" type="text/css" href="cuestionario.css">
+    <script type="text/JavaScript" src="Cuestionario.js"></script>
+    
+</head>
+<body>
+    <div class="titulos">
+    <h3>Recibo de compra</h3>
+    <h4>Univercidad Politecnica De San Luis Potosi</h4>
+    <h4> C. Urbano Villalón 500, La Ladrillera, 78369 San Luis Potosí, S.L.P</h4>
+    <p></p> <!--fecha y hora-->
+    </div>
+    
+
+    <div class="recibo">
+        <h5>Ingresa los datos de tu pedido</h5>
+        <form name="formulario">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre de quien realiza el pedido"><br/>
+
+            <label for="PlatillosLigeros">Platillos Ligeros</label><br/>
+            <select name="PlatillosLigeros" id="PlatillosLigeros">
+                <option value="____" data-price="0">...</option>
+                <option value="Ensalada" data-price="20">Ensalada</option>
+                <option value="Molletes " data-price="10">Molletes</option>
+                <option value="Sandwich" data-price="20">Sandwich</option>
+                <option value="Tarta de atun" data-price="35">Tarta de atun</option>
+                <option value="Tostada de aguacate" data-price="17">Tostada de aguacate</option>
+                <option value="Sopa" data-price="30">Sopa de verduras</option>
+                <option value="Elote" data-price="15">Elote con chile y limon</option>
+                <option value="Ensalada de quinoa" data-price="28">Ensalada de quinoa</option>
+            </select><br/>
+
+            <label for="Panaderia">Panaderia</label><br/>
+            <select name="Panaderia" id="Panaderia">
+                <option value="____" data-price="0">...</option>
+                <option value="Cruasanes" data-price="10">Cruasanes</option>
+                <option value="Dona glaseada" data-price="20">Dona glaseada</option>
+                <option value="Dona de chocolate" data-price="12">Dona de chocolate</option>
+                <option value="Dona de azucar" data-price="12">Dona de azucar</option>
+                <option value="Galleta" data-price="10">Galleta</option>
+                <option value="Mufin" data-price="35">Mufin</option>
+                <option value="Campechanas" data-price="15">Campechanas</option>
+                <option value="Polvoron" data-price="14">Polvoron
+                </option>
+            </select><br/>
+
+            <label for="DulsesSanks">Dulces y Snaks</label><br/>
+            <select name="Dulces" id="Dulces">
+                <option value="____">...</option>
+                <option value="Paleta" data-price="5">Paleta</option>
+                <option value="Goma de mascar" data-price="2">Goma de mascar</option>
+                <option value="Frituras" data-price="10">Frituras</option>
+                <option value="Barritas Bimbo" data-price="15">Barritas Bimbo</option>
+                <option value="Fruta" data-price="20">Fruta</option>
+                <option value="Muecas" data-price="12">Muecas</option>
+                <option value="Panzon" data-price="12">Panzon</option>
+                <option value="Mazapan" data-price="10">Mazapan</option>
+            </select><br/>
+
+            <label for="Postres">Postres</label><br/>
+            <select name="Postres" id="Postres">
+                <option value="____" data-price="0">...</option>
+                <option value="Pastel de frutas" data-price="19">Pastel de frutas</option>
+                <option value="Helado" data-price="15">Helado</option>
+                <option value="Tiramisu" data-price="35">Tiramisu</option>
+                <option value="Carlota de limon" data-price="12">Carlota de limon</option>
+                <option value="Flan" data-price="15">Flan</option>
+                <option value="PayLimon" data-price="20">PayLimon</option>
+            </select><br/>
+
+             <label for="BebidasCalientes">Bebidas Calientes</label><br/>
+            <select name="BebidasC" id="BebidasC">
+                <option value="____" data-price="0">...</option>
+                <option value="Cafe" data-price="15">Cafe</option>
+                <option value="Te" data-price="15">Te</option>
+                <option value="Chocolate" data-price="20">Chocolate</option>
+                <option value="Americano" data-price="18">Americano</option>
+                <option value="Capuchino" data-price="25">Capuchino</option>
+            </select><br/>
+
+            <label for="BebidasFria">Bebidas Frias</label><br/>
+            <select name="Bebidas" id="Bebidas">
+                <option value="____" data-price="0">...</option>
+                <option value="Limonada" data-price="15">Limonada</option>
+                <option value="BatidodeFruta" data-price="20">Batido de Fruta</option>
+                <option value="Refresco" data-price="17">Refresco</option>
+                <option value="TeVerde" data-price="22">Te Verde Helado</option>
+                <option value="TeNegro" data-price="22">Te Negro Helado</option>
+                <option value="PiñaColada" data-price="25">Piña Colada</option>
+                <option value="TeFruta" data-price="22">Te Helado deFruta</option>
+            </select><br/>
+
+            <label for="Aguas">Aguas Frescas</label><br/>
+            <select name="Aguas" id="Aguas">
+                <option value="____">...</option>
+                <option value="Mango" data-price="25">Agua de Mango</option>
+                <option value="Limon" data-price="25">Agua de Limon</option>
+                <option value="Frutas" data-price="25">Agua de Frutas</option>
+                <option value="Taro" data-price="27">Agua de taro</option>
+                <option value="Fresa" data-price="20">Agua de Fresa</option>
+                <option value="coco" data-price="27">Agua de Coco</option>
+                <option value="Horchata" data-price="20">Agua de Horchata</option>
+                <option value="Jamaica" data-price="20">Agua de Jamaica</option>
+            </select><br/>
+             </div>
+
+        <div class="pago">
+            <h5>Ingrese su metodo de pago</h5>
+        <label for="Pago">Transferencia</label>
+        <input type="radio" name="Pago"  id="Trandferencia" value="Trandferencia">
+        <label for="Pago">Pago en efenctivo</label>
+        <input type="radio" name="Pago"  id="Efectivo" value="Efectivo">
+        <label for="Pago">Pago con targeta</label>
+        <input type="radio" name="Pago"  id="Targeta" value="Tarjeta">
+        <input type="checkbox" name="check" id="check" >Confirmar Pedido<br>
+        <input class="boton" type="button" name="envio" id="envio" value="Realizar pedido" onclick="leerdatos()">
+        </form>
+        
+
+        
+    <iframe id="visorPDF" frameborder="0" width="500" height="400"></iframe>
+        </div>
+    
+</body>
+</html>

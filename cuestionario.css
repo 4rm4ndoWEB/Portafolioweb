@@ -1,0 +1,80 @@
+body{
+    background-color:#192b3f ;
+    
+}
+div{
+    width: 80%;
+    margin: auto;
+}
+input{
+    border-radius: 20px;
+	width: 100%;
+	border: 2px solid #cac5e7 ;
+	padding: 9px;
+	box-sizing: border-box;
+}
+label{
+    line-height: 30px;
+}
+.titulos{
+    color: #f7f2e0;
+    font-family: recibo1;
+    border-radius: 20px;
+    padding: 5%;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    width: 40%;
+}
+.recibo{
+    background-color: #d8a48f ;
+    border-radius: 20px;
+    padding: 5%;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    font-family: recibo2;
+    font-size: 16px;
+
+}
+.pago{
+    background-color: #411528;
+    border-radius: 20px;
+    font-family: recibo2;
+    color: #e9dcd6;
+    text-align: center;
+}
+#label{
+    width: 100%;
+}
+.buton{
+    background-color: #06103d;
+    color: aliceblue;
+    border-radius: 20px;
+		width: 100%;
+		border: 2px solid #cac5e7 ;
+		padding: 9px;
+		box-sizing: border-box;
+}
+.boton:focus{/*eventoto focus cambia cuando se pone dentro el cursor */
+		border-radius: 20px;
+		width: 100%;
+		border: 2px solid #cac5e7 ;
+		padding: 9px;
+		box-sizing: border-box;/*las casillas no sale del div*/
+		background-color: #c0d0a4  ;
+		color: #06103d;
+		
+	}
+@font-face {
+    font-family: recibo1;
+    src: url(Roboto_Mono/RobotoMono-Regular.ttf);
+}
+@font-face {
+    font-family: recibo2;
+    src: url(Courier_Prime/CourierPrime-Italic.ttf);
+}
+@font-face {
+    font-family: ;
+    src: url(Space_Mono/SpaceMono-BoldItalic.ttf);
+}
