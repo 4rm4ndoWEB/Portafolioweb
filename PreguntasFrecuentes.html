@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas Frecuentes</title>
+    <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');
+    s.type = "module"
+    s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2925947-H57W99BZXI3XR0M0/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
     <style>
          @font-face {
             font-family: "Lato";
@@ -78,6 +98,7 @@
       box-shadow: rgb(50, 0, 0) -5px 10px 10px;
       font-size: 15px;
       font-family: 'Montserrat', sans-serif;
+      padding: 10px;
     
 
     }
@@ -126,9 +147,69 @@ a{
     right: 130px;   
     font-family: 'Montserrat', sans-serif;
 }
+.contenedor_blog
+{
+            position: relative;
+            background: linear-gradient(to right, #000428, #004e92); 
+            padding: 40px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 20px;
+            flex-wrap: nowrap;
+}
+#cajaformulario
+{
+                position: relative;
+            background: linear-gradient(to right, #000428, #004e92); 
+            padding: 40px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 30px;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 20px;
+            flex-wrap: nowrap;
+}
+input[type=text]
+{
+    border-radius: 10px;
+    background-color: lightgray;
+    color: black;
+}
+textarea
+{
+    border-radius: 10px;
+    background-color: lightgray;
+    color: black;
+
+}
+#guardar
+{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: lightgreen;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
+#borrar{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: red;
+    color: white;
+}
     </style>
+    <script src="blog_preguntas.js"></script>
 </head>
-<body>
+<body onload="iniciar()">
     <div class="titulo">
         <button class="regresar"><a href="PaginaPrincipal.html">INICIO</a></button>
         <h1>Preguntas frecuentes y contacto</h1>
@@ -220,6 +301,23 @@ a{
             <img src="youtube.png">
         </div>
     </div>
+
+    <h1 style="text-align: center; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 50px;">🌟Reseñas🌟</h1>
+    
+<section id="cajaformulario">
+<form name="formulario">
+<p>Nombre:<br><input type="text" name="clave" id="clave" placeholder="Ingresa tu nombre"></p>
+<p>Ingresa tu reseña:<br><textarea name="text" id="texto" placeholder="Escribe tu reseña"></textarea></p>
+<input type="button" name="guardar" id="guardar"
+value="Publicar">
+<input type="button" name="borrar" id="borrar" value="Borrar reseñas">
+</form>
+
+<div id="caja">
+No hay información disponible
+</div>
+</section>
+    
     
 </body>
 </html>
