@@ -206,6 +206,49 @@ textarea
     background-color: red;
     color: white;
 }
+@media(max-width: 768px){
+    .preguntas{
+        flex-direction: column;
+    }
+    .caja{
+        box-sizing: border-box;
+    }
+    .preguntas img{
+        height: 50px;
+        width: 50px;
+    }
+    .redes{
+    position: absolute;
+    bottom: 10px;  
+    right: 5px;   
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(to left, white, #ff9355);
+    padding: 2px 2px;
+    border-radius: 10px;
+    box-shadow: rgb(50, 0, 0) -5px 10px 10px;
+   }
+   .redes img{
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+   }
+   .medios_contacto{
+    font-size: 15px;
+    position: absolute;
+    bottom: 53px;  
+    right: 30px;   
+    font-family: 'Montserrat', sans-serif;
+   }
+   .caja{
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+   }
+
+}
     </style>
     <script src="blog_preguntas.js"></script>
 </head>
@@ -283,7 +326,7 @@ textarea
         <img src="imagen_duda.jpeg">
 
         <div class="medios_contacto">
-            <b>Medios de contácto:</b>
+            <b>Medios de contacto:</b>
             <ul>
                 <li><b>Teléfono:</b> 444-231-6756</li>
                 <li><b>Correo:</b> cafe.upslp@gmail.com</li>

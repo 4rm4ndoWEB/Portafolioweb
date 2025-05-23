@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platillos lijeros</title>
+    <title>Platillos ligeros</title>
+     <script>
+        function leerDatos(producto, precio) {
+            document.getElementById("precio").innerHTML = `<br><span style="color: white; font-size: 18px;">El precio de <strong>${producto}</strong> es $${precio}</span>`;
+        }
+    </script>
     <style>
         @font-face {
             font-family: "Lato";
             src: url(Lato/Lato-Regular.ttf);
         }
+          .resultados{
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #a84105; 
+    color: #ffffff; 
+    border-radius: 20px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
         .contenedorGeneral{
             background-color: #173b61;
             text-align: center;
@@ -83,10 +97,38 @@ button.m{
     position: absolute;
     left: 5px;
     top: 0px;
+    height: 32px;
+    width: 120px;
 }
 a{
     text-decoration: none;
     color: black;
+}
+@media(max-width: 768px){
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.imagenes {
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.imagenes > div {
+    flex: 1 1 150px;
+    min-height: 200px;
+    background-size: cover;
+}
+
 }
     </style>
 </head>
@@ -95,25 +137,25 @@ a{
     <header class="titulo1">Platillos ligeros</header>
     <div class="contenedorGeneral">
     <tr>
-       <td><button>Ensalada</button></td> 
-        <td><button>Tostada de Aguacate</button></td>
+       <td><button onclick="leerDatos('Ensalada', 26)">Ensalada</button></td> 
+        <td><button onclick="leerDatos('Tostada de Aguacate', 18)">Tostada de Aguacate</button></td>
     </tr><br/>
     <tr>
-        <td><button class="m">Molletes</button></td>
-        <td><button class="e">Elote con chile y limon</button></td>
+        <td><button class="m" onclick="leerDatos('Molletes', 10)">Molletes</button></td>
+        <td><button class="e" onclick="leerDatos('Elote con chile', 15)">Elote con chile y limón</button></td>
     </tr><br/>
     <tr>
-        <td><button>Sandwich</button></td>
-        <td><button>Sopa de verduras</button></td>
+        <td><button onclick="leerDatos('Sandwich', 22)">Sandwich</button></td>
+        <td><button onclick="leerDatos('Sopa de Verduras', 26)">Sopa de verduras</button></td>
     </tr>   
     <br/>
     <tr>
-        <td><button>Tarta de atun</button></td>
-        <td><button>Ensalada de quinoa</button></td>
+        <td><button onclick="leerDatos('Tarta de Atun', 23)">Tarta de atún</button></td>
+        <td><button onclick="leerDatos('Ensalada de quinoa', 30)">Ensalada de quinoa</button></td>
     </tr>   
     <br/>
     </div>
-    
+     <div id="precio" class="resultados"  ></div>
     <div class="generalimagenes">
     <div class="imagenes">
         <div style="background-image: url(ensalada.jpg);"></div>

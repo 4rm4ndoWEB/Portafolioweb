@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postres</title>
+      <script>
+        function leerDatos(producto, precio) {
+            document.getElementById("precio").innerHTML = `<br><span style="color: white; font-size: 18px;">El precio de <strong>${producto}</strong> es $${precio}</span>`;
+        }
+    </script>
     <style>
          @font-face {
             font-family: "Lato";
@@ -45,6 +50,9 @@
           position: absolute;
           left: 5px;
           top: 0px;
+          height: 32px;
+          width: 120px;
+          
         }
         .contenedorGeneral{
             background-color: #173b61;
@@ -91,11 +99,45 @@
     flex: 5;
     border-radius: 10px;
 }
+  .resultados{
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #a84105; 
+    color: #ffffff; 
+    border-radius: 20px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
 a{
     text-decoration: none;
     color: black;
 }
+@media(max-width: 768px){
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.imagenes {
+    flex-wrap: wrap;
+    height: auto;
+}
 
+.imagenes > div {
+    flex: 1 1 150px;
+    min-height: 200px;
+    background-size: cover;
+}
+
+}
 
     </style>
 </head>
@@ -105,23 +147,23 @@ a{
     </header>
     <div class="contenedorGeneral">
         <tr>
-            <td><button>Pastel de chocolate</button></td> 
-             <td><button>Muffins</button></td>
+            <td><button onclick="leerDatos('Pastel deChocolate', 25)">Pastel de chocolate</button></td> 
+             <td><button onclick="leerDatos('Muffins', 22)">Muffins</button></td>
          </tr><br/>
          <tr>
-             <td><button>Chocoflan</button></td>
-             <td><button>Cheesecakes</button></td>
+             <td><button onclick="leerDatos('Chocoflan', 20)">Chocoflan</button></td>
+             <td><button onclick="leerDatos('Cheescakes', 25)">Cheescakes</button></td>
          </tr><br/>
          <tr>
-            <td><button>Fresas con crema</button></td>
-            <td><button>Helado</button></td>
+            <td><button onclick="leerDatos('Fresas con Crema', 30)">Fresas con crema</button></td>
+            <td><button onclick="leerDatos('Helado', 18)">Helado</button></td>
         </tr><br/>
         <tr>
-            <td><button>Brownie</button></td>
-            <td><button>Tiramisú</button></td>
+            <td><button onclick="leerDatos('Brownie', 25)">Brownie</button></td>
+            <td><button onclick="leerDatos('Tiramisú', 30)">Tiramisú</button></td>
         </tr><br/>
     </div>
-    
+    <div id="precio" class="resultados"  ></div>
     <div class="imagenes">
         <div style="background-image: url(pastel_chocolate.jpg);"></div>
         <div style="background-image: url(muffins.jpeg);"></div>

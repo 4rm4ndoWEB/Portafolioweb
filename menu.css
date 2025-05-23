@@ -91,3 +91,50 @@ a {
     text-decoration: none;
     color: black;
   }
+  @media(max-width: 768px){
+    .menu{
+        flex-direction: row;
+    }
+    .boton_comidas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    border-radius:  5px;
+    border-color: black;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    }
+    .boton_bebidas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    border-radius:  5px;
+    border-color: black;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    }
+    .categoria {
+    width: 32%;
+    background-color: navy;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    justify-items: center;
+    }
+    h2 {
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    }
+    h1{
+        font-size: 35px;
+    }
+
+  }

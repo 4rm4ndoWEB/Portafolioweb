@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bebidas frías</title>
-        
+      <script>
+        function leerDatos(producto, precio) {
+            document.getElementById("precio").innerHTML = `<br><span style="color: white; font-size: 18px;">El precio de <strong>${producto}</strong> es $${precio}</span>`;
+        }
+    </script>   
  
     </script>
 </head>
@@ -83,6 +87,41 @@
     text-decoration: none;
     color: black;
 }
+ .resultados{
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #a84105; 
+    color: #ffffff; 
+    border-radius: 20px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
+@media(max-width: 768px){
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.imagenes {
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.imagenes > div {
+    flex: 1 1 150px;
+    min-height: 200px;
+    background-size: cover;
+}
+
+}
 </style>
 <body>
     <header class="titulo1">Bebidas frías
@@ -91,36 +130,36 @@
 
     <div class="contenedorGeneral">
         <tr>
-            <td><button onload="alert()">Coca-cola</button></td> 
-             <td><button>Agua natural</button></td>
+            <td><button onclick="leerDatos('Coca-Cola',20)">Coca-cola</button></td> 
+             <td><button onclick="leerDatos('Agua Natural',10)">Agua natural</button></td>
         </tr><br/>
         <tr>
-            <td><button>Jugo de naranja</button></td> 
-            <td><button>Jugo de zanahoria</button></td>
+            <td><button onclick="leerDatos('Jugo de Naranja',25)">Jugo de naranja</button></td> 
+            <td><button onclick="leerDatos('Juga de Zanahoria',20)">Jugo de zanahoria</button></td>
         </tr><br/>
         <tr>
-            <td><button>Frappé de café</button></td> 
-             <td><button>Boost</button></td>
+            <td><button onclick="leerDatos('Frappe de Cafe',25)">Frappé de café</button></td> 
+             <td><button onclick="leerDatos('Boost',33)">Boost</button></td>
          </tr><br/>
 
         <tr>
-            <td><button>Limonada</button></td> 
-             <td><button>Batido de fruta</button></td>
+            <td><button onclick="leerDatos('Limonada',15)">Limonada</button></td> 
+             <td><button onclick="leerDatos('Batido de Fruta',25)">Batido de fruta</button></td>
          </tr><br/>
 
         <tr>
 
         <tr>
-            <td><button>Te verde Helado</button></td> 
-             <td><button>Te negro Heladdo</button></td>
+            <td><button onclick="leerDatos('Te Verde Helado',20)">Te verde Helado</button></td> 
+             <td><button onclick="leerDatos('Te negro Helado',20)">Te negro Heladdo</button></td>
          </tr><br/>
 
           <tr>
-            <td><button>Piña colada</button></td> 
-             <td><button>Te Helado de fruta</button></td>
+            <td><button onclick="leerDatos('Piña Colada',25)">Piña colada</button></td> 
+             <td><button onclick="leerDatos('Te Helado de Fruta'),25">Te Helado de fruta</button></td>
          </tr><br/>
     </div>
-
+ <div id="precio" class="resultados"  ></div>
     <div class="imagenes">
         <div style="background-image: url(coca-cola.jpg);"></div>
         <div style="background-image: url(agua_natural.webp);"></div>
@@ -128,6 +167,12 @@
         <div style="background-image: url(jugo_zanahoria.jpg);"></div>
         <div style="background-image: url(frappe_café.jpg);"></div>
         <div style="background-image: url(boost.webp);"></div>
+        <div style="background-image: url(Limonada.jpg);"></div>
+        <div style="background-image: url(batido_fruta.jpg);"></div>
+        <div style="background-image: url(Te\ Verde.jpg);"></div>
+        <div style="background-image: url(TeNegro.jpg);"></div>
+        <div style="background-image: url(PiñaColada.jpg);"></div>
+        <div style="background-image: url(TeFruta.jpg);"></div>
     </div>
 </body>
 </html>

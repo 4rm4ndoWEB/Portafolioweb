@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snacks y Dulceria</title>
+      <script>
+        function leerDatos(producto, precio) {
+            document.getElementById("precio").innerHTML = `<br><span style="color: white; font-size: 18px;">El precio de <strong>${producto}</strong> es $${precio}</span>`;
+        }
+    </script>
     <style>
         body{
             background-color: #09062e;
@@ -25,7 +30,7 @@
 		color: white;
         font-size: 15px;
         cursor: pointer;
-        width: 100px;
+        width: 190px;
 }
 button:hover{
     background-color: #ffffff;
@@ -75,10 +80,47 @@ button:hover{
     position: absolute;
     left: 5px;
     top: 0px;
+    height: 29px;
+    width: 120px;
 }
 a{
     text-decoration: none;
     color: black;
+}
+  .resultados{
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #a84105; 
+    color: #ffffff; 
+    border-radius: 20px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
+@media(max-width: 768px){
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.imagenes {
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.imagenes > div {
+    flex: 1 1 150px;
+    min-height: 200px;
+    background-size: cover;
+}
+
 }
     </style>
 </head>
@@ -88,28 +130,29 @@ a{
     </header>
     <div class="contenedorGeneral">
         <tr>
-            <td><button>Paletas</button></td> 
-            <td><button>Gomas de mascar</button></td>
+            <td><button onclick="leerDatos('Paleta',5)">Paletas</button></td> 
+            <td><button onclick="leerDatos('Goma de Mascar',2)">Gomas de mascar</button></td>
          </tr><br/>
          <tr>
-             <td><button>Frituras</button></td>
-             <td><button>Barritas</button></td>
+             <td><button onclick="leerDatos('Frituras',2)">Frituras</button></td>
+             <td><button onclick="leerDatos('Barritas',17)">Barritas</button></td>
          </tr><br/>
          <tr>
-            <td><button>Gomitas</button></td> 
-            <td><button>Fruta</button></td>
+            <td><button onclick="leerDatos('Gomitas',10)">Gomitas</button></td> 
+            <td><button onclick="leerDatos('Fruta',20)">Fruta</button></td>
          </tr><br/>
 
           <tr>
-            <td><button>Muecas</button></td> 
-            <td><button>Panzon</button></td>
+            <td><button onclick="leerDatos('Muecas',12)">Muecas</button></td> 
+            <td><button onclick="leerDatos('Panzon',12)">Panzón</button></td>
          </tr><br/>
 
           <tr>
-            <td><button>Mazapan</button></td> 
+            <td><button onclick="leerDatos('Mazapan',11)">Mazapán</button></td> 
+            <td><button onclick="leerDatos('Gusano',12)">Gusano</button></td> 
          </tr><br/>
     </div>
-
+ <div id="precio" class="resultados"  ></div>
     <div class="imagenes">
         <div style="background-image: url(paletas.webp);"></div>
         <div style="background-image: url(Goma_de_mascar.jpg);"></div>
@@ -117,6 +160,10 @@ a{
         <div style="background-image: url(barritas_energeticas.jpg);"></div>
         <div style="background-image: url(gomitas.jpeg);"></div>
         <div style="background-image: url(fruta.jpg);"></div>
+        <div style="background-image: url(muecas.jpg);"></div>
+        <div style="background-image: url(panzon.jpg);"></div>
+        <div style="background-image: url(mazapan.jpg);"></div>
+        <div style="background-image: url(gusano.jpg);"></div>
     </div>
 </body>
 </html>

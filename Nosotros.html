@@ -129,6 +129,44 @@ a{
   text-decoration: none;
   color: black;
 }
+@media(max-width: 768px){
+  h1 {
+    font-size: 2rem;
+  }
+
+  .caja, .caja2 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .caja2 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor_mapa {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contenedor_mapa iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .contenedor_imagenes img {
+    width: 90%;
+    height: auto;
+  }
+
+}
 
 
   </style>
@@ -136,7 +174,7 @@ a{
 <body>
 
   <header>
-    <button class="regresar"><a href="PaginaPrincipal.html">INICIO</a></button>
+    <button class="regresar"><a href="pagina_menu.html">INICIO</a></button>
   </header>
 
   <h1>NOSOTROS</h1>
@@ -175,7 +213,7 @@ a{
     <img src="cafe4.jpeg" style="width: 450px; height: 350px;">
   </div>
 
-  <h1 style="text-align: center;" color="white">Nuestra ubicación</h1>
+  <h1 style="text-align: center; color: white;">Nuestra ubicación</h1>
   <div class="contenedor_mapa">
     <h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 30px;">Fácil ubicación</h2><br>
     <br><p style="font-size: 20px;">

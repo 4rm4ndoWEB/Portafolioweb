@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snacks y panaderia</title>
+ <script>
+        function leerDatos(producto, precio) {
+            document.getElementById("precio").innerHTML = `<br><span style="color: white; font-size: 18px;">El precio de <strong>${producto}</strong> es $${precio}</span>`;
+        }
+    </script>
     <style>
         body{
             background-color: #09062e;
@@ -75,53 +80,99 @@ button:hover{
     position: absolute;
     left: 5px;
     top: 0px;
+    height: 29px;
+    width: 120px;
 }
 .titulo1{
     font-family: "Lato";
     color: #ffebd0;
 }
+.resultados{
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #a84105; 
+    color: #ffffff; 
+    border-radius: 20px; 
+    width: 100%; 
+    margin-bottom: 20px;
+}
 a{
     text-decoration: none;
     color: black;
+}
+@media(max-width: 768px){
+    .regresar {
+    background-color: orange;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 85px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.imagenes {
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.imagenes > div {
+    flex: 1 1 150px;
+    min-height: 200px;
+    background-size: cover;
+}
+
 }
 </style>
 </head>
 <body>
     <div>
         <div>
-            <header class="titulo1">Snacks y Panadería</header>
+            <header class="titulo1">Snacks y Panaderia</header>
             <button class="regresar"><a href="pagina_menu.html">Regresar</a></button>
         </div>
         <div class="contenedorGeneral">
             <tr>
-                <td><button>Croissants</button></td> 
-                 <td><button>Pan dulce</button></td>
+                <td><button onclick="leerDatos('Cruassàn',15)">Croissant</button></td> 
+                 <td><button onclick="leerDatos('Pan dulce',12)">Pan dulce</button></td>
              </tr><br/>
              <tr>
-                 <td><button class="m">Donas</button></td>
-                 <td><button class="e">Galletas</button></td>
+                 <td><button onclick="leerDatos('Donas',12)">Donas</button></td>
+                 <td><button onclick="leerDatos('Galletas',10)">Galletas</button></td>
              </tr><br/>
 
               <tr>
-                 <td><button class="m">Dona Glaseada</button></td>
-                 <td><button class="e">Dona de chocolate</button></td>
+                 <td><button onclick="leerDatos('Dona Glaseada',15)">Dona Glasada</button></td>
+                 <td><button onclick="leerDatos('Dona de Chocolate',15)">Dona de chocolate</button></td>
              </tr><br/>
 
               <tr>
-                 <td><button class="m">Donas azúcar</button></td>
-                 <td><button class="e">Mufin</button></td>
+                 <td><button onclick="leerDatos('Dona de Azucar',12)">Donas azúcar</button></td>
+                 <td><button onclick="leerDatos('Muffin',22)">Muffin</button></td>
              </tr><br/>
 
               <tr>
-                 <td><button class="m">Campechana</button></td>
-                 <td><button class="e">Polvorón</button></td>
+                 <td><button onclick="leerDatos('Campechana', 15)">Campechana</button></td>
+                 <td><button onclick="leerDatos('Polvoron',10)">Polvorón</button></td>
              </tr><br/>
         </div>
+        <div id="precio" class="resultados"  ></div>
         <div class="imagenes">
             <div style="background-image: url(croissant.jpg);"></div>
             <div style="background-image: url(pan_dulce.png);"></div>
             <div style="background-image: url(donas.webp);"></div>
             <div style="background-image: url(galletas.jpeg);"></div>
+             <div style="background-image: url(donaGlaseada.jpg);"></div>
+              <div style="background-image: url(donaAzucar.jpg);"></div>
+               <div style="background-image: url(donaChocolate.jpg);"></div>
+             <div style="background-image: url(muffins.jpeg);"></div>
+              <div style="background-image: url(campechana.jpg);"></div>
+               <div style="background-image: url(polvoron.jpg);"></div>
         </div>
+        
+         
 </body>
 </html>
